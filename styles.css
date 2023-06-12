@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1f 4fr;
+    grid-template-rows: 200px 1fr;
+}
+.header {
+    color:rgb(5, 5, 87);
+    text-shadow: 2px 2px 2px rgb(0, 255, 242);
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr;
+    box-shadow: 4px 4px 5px 1px rgb(103, 4, 4);
+}
+.sidebar {
+    grid-area: 1 / 1 / -1 / 2;
+    background: #1b0260;
+    color: rgb(222, 178, 16);
+    display: grid;
+    grid-template-rows: 15vh  60vh 40vh;
+    gap: 15px;
+    padding: 10px;
+}
+.nav img {
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 2px;
+}
+.brand,#home,#profile,#msgs,#history,#tasks,#commun,#settings,#supp,#privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 15px;
+} 
+.nav img:hover {
+    box-shadow: 2px 2px 2px red;
+}
+.nav h3 {
+    transition: .5s;
+}
+.nav h3:hover {
+    transform: scale(1,2);
+    color: green;
+}
+.main-section {
+    grid-area: 2 / 2 / 3 / 3;
+    background: rgba(149, 154, 165, 0.8);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    gap: 30px;
+    color: darkblue;
+}
+.main-content {
+    grid-area: 1 / 1 / -1/ 2;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px,1fr));
+    gap: 40px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 3px black;
+    padding: 10px;
+    border-radius: 20px;
+}
+.projects > div,.lessons>div {
+    background: rgb(236, 231, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+.projects > div::after,.lessons>div::after {
+    content: 'Never GET Annoyed Uncover through hover';
+    text-shadow: 2px 2px 1px white;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgb(12, 77, 56),rgb(40, 68, 6),rgb(160, 36, 104),rgb(85, 115, 189));
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    transition: transform 1s;
+    transform-origin: top;
+}
+.projects > div:hover::after,.lessons>div:hover::after {
+    transform: scaleY(0.0001);
+}
+.brand img {
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+.lessons>div {
+    margin-top: 30px;
+    font-size: 18px;
+}
+.fb {
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+}
+.fb img,.icon {
+    width: 25px;
+    height: 25px;
+}
+.lessons-done {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.lessons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lessons p {
+    font-size: 10px;
+}
+
+.lessons>div>img {
+    width: 100%;
+    height: 80px;
+}
+.coming {
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 10px;
+    box-shadow: 3px 3px 3px 3px black;
+    border-radius: 20px;
+}
+.coming {
+    text-align: center;
+}
+.next {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+    align-items: center;
+    gap: 20px;
+}
+.next > div {
+    border-bottom: 2px solid green;
+    border-right: 2px solid blue;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 4px 1px black;
+    color: rgb(5, 5, 87);
+}
+.next div {
+    transition: transform 1s;
+}
+.next div:hover {
+    transform: rotateY(720deg) scale(1.4,1.4) rotate(30deg);
+}
+.flex-container { 
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.search {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15px;
+    align-items: center;
+}
+.flex2-container {
+    grid-row: 2 /3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+}
+.me {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btns {
+    display: flex;
+    gap: 10px;
+} 
+.btns button {
+    height: 40px;
+    width: 80px;
+    font-size: 5px;
+    border-radius: 10px;
+    position: relative;
+    background: darkblue;
+    box-shadow: 3px 3px 3px green;
+    filter: brightness(70%);
+    transition: font-size 1.2s, filter 2s;
+}
+.btns button:hover {
+    font-size: 21px;
+    font-weight: bold;
+    color: rgb(0, 255, 251);
+    filter: brightness(200%);
+}
+.btns button::after {
+    content: '';
+    padding-top: 7px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background: radial-gradient(rgb(49, 171, 49),rgb(136, 136, 8),rgb(173, 33, 33),rgb(29, 29, 126));
+    position: absolute;
+    left: 0;
+    top: -1px;
+    transform-origin: left;
+    transition: transform 1s;
+}
+.btns button:hover::after {
+    transform: scaleX(0.01);
+    transform-origin: left;
+}
+.right img:nth-of-type(2) {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.me img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.brand img {
+    width: 6vw;
+}
+img.project {
+    width: 100%;
+    height: 150px;
+}
+input {
+    width: 40vw;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    height: 2.5vw;
+    padding: 10px;
+    box-shadow: 5px 5px 4px rgb(0, 0, 0,0.9);
+    background: darkblue;
+    color: aliceblue;
+}
