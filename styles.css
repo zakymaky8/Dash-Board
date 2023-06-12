@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .container {
-    margin: 0;
     display: grid;
     grid-template-columns: 1f 4fr;
     grid-template-rows: 200px 1fr;
@@ -41,13 +40,13 @@
     font-size: 15px;
 } 
 .nav img:hover {
-    box-shadow: 2px 2px 2px red;
+    box-shadow: 2px 2px 2px rgb(0, 255, 21);
 }
 .nav h3 {
-    transition: .5s;
+    transition: .1s;
 }
 .nav h3:hover {
-    transform: scale(1,2);
+    transform: scale(1.15,1.5);
     color: green;
 }
 .main-section {
@@ -97,7 +96,7 @@
     position: absolute;
     border-radius: 20px;
     height: 100%;
-    transition: transform 1s;
+    transition: transform .8s;
     transform-origin: top;
 }
 .projects > div:hover::after,.lessons>div:hover::after {
@@ -166,7 +165,7 @@
     transition: transform 1s;
 }
 .next div:hover {
-    transform: rotateY(720deg) scale(1.4,1.4) rotate(30deg);
+    transform: rotateY(360deg) scale(1.15) rotate(30deg);
 }
 .flex-container { 
     grid-row: 1 / 2;
@@ -205,13 +204,13 @@
 .btns button {
     height: 40px;
     width: 80px;
-    font-size: 5px;
+    font-size: 1px;
     border-radius: 10px;
     position: relative;
     background: darkblue;
     box-shadow: 3px 3px 3px green;
     filter: brightness(70%);
-    transition: font-size 1.2s, filter 2s;
+    transition: font-size 1.2s, filter 1.5s;
 }
 .btns button:hover {
     font-size: 21px;
@@ -221,7 +220,6 @@
 }
 .btns button::after {
     content: '';
-    padding-top: 7px;
     box-sizing: border-box;
     height: 40px;
     width: 80px;
@@ -230,12 +228,10 @@
     position: absolute;
     left: 0;
     top: -1px;
-    transform-origin: left;
-    transition: transform 1s;
+    transition: transform .5s;
 }
 .btns button:hover::after {
-    transform: scaleX(0.01);
-    transform-origin: left;
+    transform: scale(0.001);
 }
 .right img:nth-of-type(2) {
     width: 35px;
